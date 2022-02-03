@@ -70,7 +70,7 @@ Git is an open-source **Distributed** version control systems used for tracking 
 <img src="./img/architecture.png" alt="drawing" style="display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;" />
+  width: 70%;" />
 
 
 Git saves different versions of projects in a folder known as a **Git repository**.
@@ -89,7 +89,7 @@ A Git repository is a virtual storage of your project. It allows you to save ver
 <img src="./img/architecture-1.png" alt="drawing" style="display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;" />
+  width: 80%;" />
   *
 ## Getting Started
 
