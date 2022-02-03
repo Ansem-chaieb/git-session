@@ -89,7 +89,7 @@ A Git repository is a virtual storage of your project. It allows you to save ver
 <img src="./img/architecture-1.png" alt="drawing" style="display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;" />
+  width: 100%;" />
   *
 ## Getting Started
 
