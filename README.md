@@ -64,7 +64,9 @@
 <!-- ABOUT THE PROJECT -->
 ## Git Definition
 
-Git is an open-source **Distributed** version control systems used for tracking project changes and revisions across different teams. 
+Git is an open-source **Distributed** version control systems used for tracking project changes and revisions across different teams.
+
+</br>
 <img src="./img/architecture.png" alt="drawing" style="display: block;
   margin-left: auto;
   margin-right: auto;
@@ -84,15 +86,11 @@ A Git repository is a virtual storage of your project. It allows you to save ver
  <!-- GETTING STARTED -->
 ### Git architecture
 
-```mermaid
-sequenceDiagram
-working directroy ->> staging area: git add;
-staging area ->> local repo:git commit;
-local repo ->> working directroy: git reset /  git checkout / git  revert
-local repo ->> remote repo :git push
-remote repo ->> local repo:git fetch
-remote repo ->> working directroy: git clone / git pull  
-```
+<img src="./img/architecture-1.png" alt="drawing" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;" />
+  *
 ## Getting Started
 
 #### Init
@@ -187,7 +185,7 @@ git revert <commit-id>
 
 This command will undo what was done at the time of the commit by creating a new commit. This does ***not alter the history*** but will ***add a new reversal commit***
 
-***example***:
+###### Example
 
 > git revert fa1c031
 
@@ -202,34 +200,34 @@ result:
 
  ![enter image description here](./img/revert-commit-example-graph.png)
 
-#### reset
+#### Reset
 
 ```sh 
-$ git reset 
+git reset 
 ```
 Deletes all files from the staging area, without deleting the changes.
 
 ```sh 
-$ git reset <commit-id>
+git reset <commit-id>
 ```
-* allows you to go back to the commit, 
-* resets the staging area while leaving your working folder as is. The history will be lost (subsequent <commit> commits will be lost, ***but not your changes***). 
+* Allows you to go back to the commit, 
+* Resets the staging area while leaving your working folder as is. The history will be lost (subsequent <commit> commits will be lost, ***but not your changes***). 
 
 This command mostly allows you to clean up the history by resubmitting a single commit instead of too many scattered commits.
 
-example :
+Example :
 
  > git reset fa1c031
 
 ![enter image description here](./img/reset-commit-example-graph.png)
 
 ```sh 
-$ git reset <commit-id> --hard
+git reset <commit-id> --hard
 ```
 
-* Returns to the 'commit-id' 
-* resets the staging area and working folder to match.
- All changes, as well as any commits made after the 'commit-id' will be deleted.
+* Returns to the `<commit-id>` 
+* Reset the staging area and working folder to match.
+ All changes, as well as any commits made after the `<commit-id>` will be deleted.
   **Use with extreme caution**
 
 ## Branches
@@ -242,7 +240,6 @@ git branch                     # Allows you to list the branches
 git branch branch_name         # Allows you to create a new branche  branch_name 
 git branch -m branch_name      # rename the current branch to  branch_name
 git branch -d branch_name      # delete a branch
-
 ```
 
 The **branch** command allows you to manage everything related to branches (adding, listing, removing, renaming)
@@ -254,7 +251,7 @@ git checkout branch_name
 ```
 Allows you to go to an existing branch.
 
-example:
+Example:
 
 ```sh 
  git branch my_first_branch           #create my new branch
@@ -264,7 +261,7 @@ example:
  git commit -m "my first commit in my new branch" #add a commit in this branch
 
 ```
-result:
+Result:
 
  >Switched to branch 'my-first-branch'
 
@@ -279,7 +276,7 @@ git merge branch_name
 Merge allows you to connect two branches together and fuse them.
 The fusion of two branches is always done **from the main branch**. 
 
-example:
+Example:
 
 ```sh 
 git chekout master    # we must switch to the main brach
@@ -290,7 +287,7 @@ git merge my-new-branch
 
 ## Remote
 
-### Remote
+#### Remote
 
 ```sh 
 git remote add <alias> <chemin/url>  # Add a new remote repository
@@ -304,7 +301,7 @@ The remote command allows you to create, display and delete connections. These c
 
 
 
-**exemple:**
+Exemple:
 
 ```sh 
 git remote add origin https://github.com/khaliljedda/git-session.git  
@@ -329,9 +326,9 @@ example:
 git push origin master  
 ```
 
-#### Fech
+#### Fetch
 
-The fetch command allows to import the information from the remote repository. The import is done through special branches to give us the possibility to compare and if necessary merge manually.
+The fetch command allows to import the information from the remote repository. The import is done through special branches to give us the possibility to compare it and if necessary merge manually.
 
 ```sh 
 git fetch <remote> # Retrieves all branches and commits 
